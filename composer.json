@@ -1,0 +1,39 @@
+{
+    "name": "lindelius/php-checkip",
+    "description": "A minimal, PSR based library for checking the public IP of the host machine.",
+    "keywords": ["check-ip", "ip"],
+    "homepage": "https://github.com/lindelius/php-checkip",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Tom Lindelius",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "psr/http-client": "^1.0",
+        "psr/http-factory": "^1.0",
+        "psr/log": "^1.0"
+    },
+    "require-dev": {
+        "guzzlehttp/guzzle": "^7.0",
+        "phpunit/phpunit": "^10.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lindelius\\CheckIp\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Lindelius\\CheckIp\\Tests\\": "tests/"
+        }
+    },
+    "suggest": {
+        "guzzlehttp/guzzle": "PSR compatible HTTP clients and factories"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --testsuite Unit"
+    }
+}
